@@ -14,6 +14,26 @@
   --color-social-hover: #f0f0f0;
   --color-floating-label: #5f6368;
   --color-white: #fff;
+  --color-background-btn-google: #f0f0f0;
+  --color-border-btn-google: #ccc;
+  
+}
+
+.dark-mode {
+  --color-background: #0f0f0f;
+  --color-text: #b5b5b5;
+  --color-border: #333333;
+  --color-placeholder: #858585;
+  --color-primary: #137cec;
+  --color-primary-hover: #4497f0;
+  --color-link: #2672d6;
+  --color-divider: #222222;
+  --color-social-hover: #0f0f0f;
+  --color-floating-label: #8f9397;
+  --color-white: #333333;
+  --color-background-btn-google: #0f0f0f;
+  --color-border-btn-google: #4c4c4c;
+
 }
 
 /* Reset básico de margens, preenchimentos e definição de box-sizing para o layout */
@@ -101,7 +121,8 @@ body {
   left: 8px;
   transform: translateY(-50%);
   color: var(--color-placeholder);
-  background-color: var(--color-white);
+  background-color: white;
+  border-radius: 8px;
   padding-inline: 6px;
   transition: all 0.3s ease;
   pointer-events: none; /* Garante que o clique passe direto para o input */
@@ -214,21 +235,19 @@ body {
 }
 
 /* Alinhamento em grade de 3 colunas iguais para os botões de login social */
-.form-socials {
+.form-btn--google {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  border: 1px solid var(--color-border-btn-google);
+  color: var(--color-text); /* Adapta a cor da letra pro Dark Mode */
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  margin-bottom: 15px;
 }
 
-/* Estilização individual dos botões sociais */
-.form-btn--social {
-  border: 1px solid var(--color-divider);
-  transition: 0.3s ease;
-}
-
-.form-btn--social:hover {
-  background-color: var(--color-social-hover);
+/* Efeito ao passar o mouse */
+.form-btn--google:hover {
+  background-color: var(--color-background-btn-google);
 }
 
 .btn-icon {
@@ -247,6 +266,70 @@ body {
 /* Responsividade: Ajusta os espaçamentos internos para telas de celulares menores */
 @media (max-width: 480px) {
   .form-container {
-    padding: 60px 30px;
+    padding: 40px 20px;
+    box-shadow: 10px -10px var(--color-primary);
   }
+}
+
+.theme-toggle-btn {
+  /* Posicionamento Fixo no canto superior direito */
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  
+  /* Formato Redondo */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Perfeitamente redondo */
+  
+  /* Aparência e Cores (usam suas variáveis CSS) */
+  background-color: var(--color-white); /* Fundo branco no light, preto no dark */
+  border: 1px solid var(--color-border); /* Borda cinza suave */
+  cursor: pointer;
+  
+  /* Centralização dos Ícones (Emojis) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px; /* Tamanho do emoji */
+  
+  /* Garante que o botão fique em cima de TUDO (form, sombras, etc) */
+  z-index: 1000;
+  
+  /* Transição suave ao passar o mouse */
+  transition: all 0.3s ease;
+  
+  /* Remove contorno padrão do navegador */
+  outline: none;
+  
+  /* Adiciona uma sombra suave para dar profundidade */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Efeito de Hover (passar o mouse) */
+.theme-toggle-btn:hover {
+  background-color: var(--color-background); /* Fundo cinza claro no light */
+  transform: scale(1.05); /* Pulsa levemente */
+}
+
+/* ------------------------------------------------------------
+   Lógica de exibição dos Ícones (Light/Dark Mode)
+   ------------------------------------------------------------ */
+
+/* Padrão (Light Mode): Mostra a Lua, esconde o Sol */
+.theme-toggle-btn .icon-sun {
+  display: none;
+}
+
+.theme-toggle-btn .icon-moon {
+  display: block;
+}
+
+/* Quando o corpo da página tiver a classe '.dark-mode': Inverte */
+body.dark-mode .theme-toggle-btn .icon-moon {
+  display: none;
+}
+
+body.dark-mode .theme-toggle-btn .icon-sun {
+  display: block;
 }
