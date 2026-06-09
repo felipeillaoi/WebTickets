@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="assets/js/main.js" defer></script>
 </head>
 <body>
 
+  <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Alternar tema">
+      <span class="icon-moon">🌙</span>
+      <span class="icon-sun">☀️</span>
+  </button>
     <div class="container">
       
       <div class="form-container">
@@ -83,17 +88,11 @@
         </div>
 
         <div class="form-bottom">
-          <div class="form-socials">
-            <button class="form-btn form-btn--social">
-              <img src="assets/icons/google.svg" class="btn-icon" alt="social icon" />
-            </button>
-            <button class="form-btn form-btn--social">
-              <img src="assets/icons/facebook.svg" class="btn-icon" alt="social icon" />
-            </button>
-            <button class="form-btn form-btn--social">
-              <img src="assets/icons/twitter.svg" class="btn-icon" alt="social icon" />
-            </button>
-          </div>
+          <button class="form-btn form-btn--google">
+            <img src="assets/icons/google.svg" class="btn-icon" alt="Ícone do Google" />
+            Continuar com o Google
+          </button>
+          
           <p>
             Não possui uma conta? <a href="#" class="form-link">Registre-se</a>
           </p>
