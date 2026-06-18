@@ -15,21 +15,46 @@
     </button>
 
     <header class="public-header">
-        <div class="logo">✈️ MEI Viagens</div>
-        <nav>
-            <a href="login.html" class="btn-outline">Acesso Restrito</a>
+        <div class="logo">Web Passeios</div>
+        
+        <nav class="header-nav">
+            <ul class="nav-links">
+                <li><a href="#explorar">Explorar</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            
+            <div class="auth-container">
+                <a href="login.html" id="nav-btn-login" class="btn-outline">Fazer Login</a>
+
+                <div id="nav-user-profile" class="user-profile" style="display: none;">
+                    <span id="nav-user-email" class="user-email">usuario@email.com</span>
+                    <button id="nav-btn-logout" class="btn-logout-text">Sair</button>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
         <section class="hero-section">
-            <div class="hero-content">
-                <h1>Sua próxima grande aventura começa aqui.</h1>
-                <p>Especialistas em criar memórias inesquecíveis. Explore nossos pacotes mais populares abaixo e garanta suas férias.</p>
+            
+            <div class="hero-bg-image">
+                <img src="https://img.freepik.com/fotos-gratis/paisagem-tranquila-da-primavera-paisagem-manha-verde_1417-1019.jpg" alt="Paisagem tranquila de primavera com montanhas e lago">
+            </div>
+
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1>Sua próxima grande aventura começa aqui.</h1>
+                    <p>Especialistas em criar memórias inesquecíveis. Explore nossos destinos e garanta suas férias perfeitas.</p>
+                    <a href="#explorar" class="btn-outline" style="display: inline-block; margin-top: 30px; background-color: var(--color-primary); color: white; border: none; padding: 12px 30px; font-size: 16px;">
+                        Explorar Agora
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section class="public-packages">
+        <section id="explorar" class="page-section">
             <h2 class="section-title" style="text-align: center;">Destinos em Destaque</h2>
             
             <div class="cards-grid" id="public-grid">
@@ -42,9 +67,122 @@
                         <button class="form-btn form-btn--submit" style="margin-top: 10px;">Tenho Interesse</button>
                     </div>
                 </div>
+                </div>
+        </section>
+
+        <section id="planos" class="page-section bg-alt">
+            <h2 class="section-title" style="text-align: center;">Nossos Planos</h2>
+            <div class="cards-grid" style="max-width: 800px; margin: 0 auto;">
+                
+                <div class="plan-card">
+                    <div class="card-content" style="align-items: center; text-align: center; padding: 40px 20px;">
+                        <h3 style="font-size: 24px; margin-bottom: 10px;">Plano Básico</h3>
+                        <p class="card-desc">Hospedagem e Passagem Aérea</p>
+                        <p class="card-price" style="font-size: 32px; margin: 25px 0;">R$ 999<span style="font-size: 14px; font-weight: normal; color: var(--color-placeholder);">/pessoa</span></p>
+                        <button class="form-btn form-btn--submit" style="width: 100%; margin-top: auto;">Escolher Básico</button>
+                    </div>
+                </div>
+
+                <div class="plan-card plan-card--highlight">
+                    <div class="card-content" style="align-items: center; text-align: center; padding: 40px 20px;">
+                        <div style="background: var(--color-primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; margin-bottom: 15px; text-transform: uppercase;">Mais Vendido</div>
+                        
+                        <h3 style="font-size: 24px; margin-bottom: 10px;">Plano VIP</h3>
+                        <p class="card-desc">All-Inclusive + Guias + Translado</p>
+                        <p class="card-price" style="font-size: 32px; margin: 25px 0;">R$ 2.499<span style="font-size: 14px; font-weight: normal; color: var(--color-placeholder);">/pessoa</span></p>
+                        <button class="form-btn form-btn--submit" style="width: 100%; margin-top: auto;">Escolher VIP</button>
+                    </div>
+                </div>
+
             </div>
         </section>
+
+        <section id="sobre" class="page-section">
+            <h2 class="section-title" style="text-align: center;">A História da Web Passeios</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto; color: var(--color-text); line-height: 1.8; font-size: 16px;">
+                
+                <p style="margin-bottom: 20px;">
+                    Fundada em <strong>1º de junho de 2026</strong>, a Web Passeios nasceu da intersecção improvável entre a tecnologia e a paixão por descobrir o mundo. 
+                </p>
+
+                <p style="margin-bottom: 20px;">
+                    A ideia foi concebida por <strong>Marcos e Alexandre</strong>. Nascidos em pequenas cidades do interior, ambos compartilhavam a ambição de transformar realidades e não hesitaram em agarrar a oportunidade quando identificaram uma lacuna no mercado de turismo local. Eles deixaram suas cidades natais e se estabeleceram em Salvador para buscar a excelência acadêmica. Hoje, já na reta final do curso de Engenharia da Computação, eles aplicam a mesma precisão, lógica e inovação exigidas na tecnologia para estruturar roteiros de viagem impecáveis.
+                </p>
+
+                <p style="margin-bottom: 20px;">
+                    O que começou como um projeto ousado há poucas semanas, rapidamente entrou em uma curva de crescimento sólida. Nós não acreditamos em pacotes engessados; acreditamos em experiências projetadas com a métrica mais importante de todas: <strong>a satisfação humana</strong>.
+                </p>
+
+                <p style="font-weight: 500; color: var(--color-primary); text-align: center; font-size: 18px; margin-top: 30px;">
+                    "Nosso maior orgulho é o feedback diário dos nossos consumidores, atestando a qualidade e a segurança que se tornaram a nossa marca registrada."
+                </p>
+
+            </div>
+        </section>
+
+        <section id="contato" class="page-section bg-alt">
+            <h2 class="section-title" style="text-align: center;">Fale Conosco</h2>
+            
+            <form class="form-box contact-form">
+                <div class="input-group">
+                    <input type="text" id="nome-contato" class="input-field" placeholder="" required>
+                    <label for="nome-contato" class="floating-label">Seu Nome</label>
+                </div>
+                
+                <div class="input-group" style="margin-top: 20px;">
+                    <input type="email" id="email-contato" class="input-field" placeholder="" required>
+                    <label for="email-contato" class="floating-label">Seu Email</label>
+                </div>
+
+                <div class="input-group" style="margin-top: 20px;">
+                    <input type="tel" id="telefone-contato" class="input-field" placeholder="" required>
+                    <label for="telefone-contato" class="floating-label">Seu Telefone / WhatsApp</label>
+                </div>
+
+                <button type="submit" class="form-btn form-btn--submit" style="margin-top: 30px; width: 100%;">
+                    Enviar Mensagem
+                </button>
+            </form>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <div class="footer-col">
+                <h3 class="footer-logo">✈️ Web Passeios</h3>
+                <p class="footer-desc">Transformando sonhos de viagem em realidade, com a precisão e segurança que você merece.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul class="footer-links">
+                    <li><a href="#explorar">Destinos</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#sobre">Nossa História</a></li>
+                    <li><a href="#contato">Fale Conosco</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <ul class="footer-contact">
+                    <li>📍 Sede: Salvador, BA - Brasil</li>
+                    <li>✉️ webpasseios@gmail.com</li>
+                    <li>📷 Instagram: <a href="#" style="color: var(--color-primary);">@webpasseiosofc</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Web Passeios. Todos os direitos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Termos de Uso</a>
+                <a href="#">Política de Privacidade (LGPD)</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
