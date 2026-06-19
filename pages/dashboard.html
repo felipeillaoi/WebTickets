@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel de Controle - Agência de Viagens</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script src="../assets/js/main.js" defer></script>
+    <script type="module" src="../assets/js/main.js"></script>
 </head>
 <body>
 
+    <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Alternar tema">
+        <span class="icon-moon">🌙</span>
+        <span class="icon-sun">☀️</span>
+    </button>
+
     <header class="dashboard-header">
         <div class="header-brand">
-            <h2>✈️ Web Passeios</h2>
+            <h2>✈️ Web Passeios - Painel Admin</h2>
         </div>
         <nav class="header-nav">
-            <a href="../index.html" class="form-link">Sair</a>
+            <button id="btn-logout-dashboard" class="form-btn" style="border: 1px solid #dc3545; color: #dc3545; padding: 5px 15px;">Sair do Painel</button>
         </nav>
     </header>
 
@@ -56,24 +61,10 @@
         </section>
 
         <section class="crud-list-section">
-            <h2 class="section-title">Pacotes Ativos</h2>
+            <h2 class="section-title">Pacotes Ativos no Banco</h2>
             
-            <div class="travel-card admin-card">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500" alt="Praia" class="card-img">
-            <div class="card-content">
-                <h3>Porto Seguro, BA</h3>
-                    <p class="card-price">R$ 1.499,00</p>
-                    
-                    <div class="card-actions">
-                        <button class="btn-action btn-edit" style="color: #007bff; border-color: #007bff;">
-                            ✏️ Editar
-                        </button>
-                        <button class="btn-action btn-delete" style="color: #dc3545; border-color: #dc3545;">
-                            🗑️ Excluir
-                        </button>
-                    </div>
+            <div class="cards-grid" id="admin-grid">
                 </div>
-            </div>
         </section>
 
     </main>

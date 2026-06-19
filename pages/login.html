@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form - Web Passeios</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script src="../assets/js/main.js" defer></script>
+    <script type="module" src="../assets/js/main.js"></script>
 </head>
 <body>
 
@@ -22,7 +22,7 @@
           <h1>Bem Vindo(a)</h1>
         </div>
 
-        <form class="form-box" action="dashboard.html">
+        <form class="form-box" id="form-login">
           
           <div class="input-group">
             <input
@@ -114,6 +114,9 @@
           eyeIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye-icon lucide-eye"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>`;
         }
       }
+      
+      // Garante que a função está disponível globalmente para o HTML
+      window.togglePassword = togglePassword; 
     </script>
   </body>
 </html>
